@@ -10,11 +10,14 @@
         "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
         "lint:prettier": "prettier --check .",
         "lint": "yarn lint:js && yarn lint:prettier",
-        "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+        "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+        "slicemachine": "start-slicemachine"
     },
     "devDependencies": {
         "@nuxtjs/eslint-config-typescript": "^12.0.0",
+        "@nuxtjs/prismic": "^3.3.0",
         "@pinia/nuxt": "^0.4.9",
+        "@slicemachine/adapter-nuxt": "^0.3.51",
         "@types/node": "^18",
         "@typescript-eslint/parser": "^6.3.0",
         "eslint": "^8.46.0",
@@ -26,7 +29,10 @@
         "prettier": "^3.0.1",
         "sass": "^1.62.0",
         "sass-loader": "^13.2.2",
+        "slice-machine-ui": "^2.8.1",
         "typescript": "^5.1.6"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@prismicio/client": "^7.11.0"
+    }
 }

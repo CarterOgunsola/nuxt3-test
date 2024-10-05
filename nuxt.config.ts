@@ -1,3 +1,4 @@
+import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
@@ -49,7 +50,13 @@ export default defineNuxtConfig({
             link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
         },
     },
+
     components: ["~/components/globals", "~/components"],
     css: ["@/styles/index.scss"],
-    modules: ["@pinia/nuxt"],
+    modules: ["@pinia/nuxt", "@nuxtjs/prismic"],
+    compatibilityDate: "2024-10-04",
+
+    prismic: {
+        endpoint: apiEndpoint || repositoryName
+    }
 });

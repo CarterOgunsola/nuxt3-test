@@ -1,8 +1,27 @@
-// @font-face {
-//   font-family: "Switzer";
-//   src: url(~/assets/fonts/Switzer-Medium.woff2) format("woff2"),
-//     url(~/assets/fonts/Switzer-Medium.woff) format("woff");
-//   font-weight: 500;
-//   font-style: normal;
-//   font-display: swap;
-// }
+// PPNeueMontreal Italic
+@font-face {
+    font-family: "PPNeueMontreal";
+    src: url(~/assets/fonts/PPNeueMontreal-Italic.woff) format("woff");
+    font-weight: 400; // adjust the weight as needed
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  // PPNeueMontreal Medium
+  @font-face {
+    font-family: "PPNeueMontreal";
+    src: url(~/assets/fonts/PPNeueMontreal-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // PPNeueMontreal Regular
+  @font-face {
+    font-family: "PPNeueMontreal";
+    src: url(~/assets/fonts/PPNeueMontreal-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  

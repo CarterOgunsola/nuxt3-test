@@ -1,0 +1,39 @@
+
+.nav {
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+    
+    &--flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--slot-left {
+        display: flex;
+        align-items: center;
+    }
+
+    &--slot-right {
+        display: flex;
+        align-items: center;
+    }
+
+    &--slot-center {
+        display: flex;
+        align-items: center;
+    }
+
+    &--brand-svg {
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+
+    &--link-wrap {
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+}
+
