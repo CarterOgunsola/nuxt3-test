@@ -1,0 +1,81 @@
+%link__wrapper {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+}
+
+%link__line {
+    background: currentColor;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: transform 0.7s $ease-out-expo;
+    width: 100%;
+}
+
+%link__line--visible {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+%link__line--hidden {
+    transform: scaleX(0);
+    transform-origin: right center;
+}
+
+%link {
+    @extend %link__wrapper;
+
+    display: inline-block;
+
+    &:after {
+        @extend %link__line;
+        @extend %link__line--visible;
+    }
+
+    @include cursor {
+        &:hover {
+            &:after {
+                transform: scaleX(0);
+                transform-origin: right center;
+            }
+        }
+    }
+}
+
+%link--hidden {
+    @extend %link__wrapper;
+
+    display: inline-block;
+
+    &:after {
+        @extend %link__line;
+        @extend %link__line--hidden;
+    }
+
+    @include cursor {
+        &:hover {
+            &:after {
+                transform: scaleX(1);
+                transform-origin: left center;
+            }
+        }
+    }
+}
+
+%active-link {
+    position: relative;
+    &::before {
+        content: "[";
+        position: absolute;
+        left: -8px;
+    }
+    &::after {
+        content: "]";
+        position: absolute;
+        right: -8px;
+    }
+}
