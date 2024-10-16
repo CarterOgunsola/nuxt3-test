@@ -53,10 +53,22 @@ export default defineNuxtConfig({
 
     components: ["~/components/globals", "~/components"],
     css: ["@/styles/index.scss"],
-    modules: ["@pinia/nuxt", "@nuxtjs/prismic"],
+    modules: ["@pinia/nuxt", "@nuxtjs/prismic", "@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxt/image"],
     compatibilityDate: "2024-10-04",
 
+    shadcn: {
+        /**
+         * Prefix for all the imported component
+         */
+        prefix: "",
+        /**
+         * Directory that the component lives in.
+         * @default "./components/ui"
+         */
+        componentDir: "./components/ui",
+    },
+
     prismic: {
-        endpoint: apiEndpoint || repositoryName
-    }
+        endpoint: apiEndpoint || repositoryName,
+    },
 });

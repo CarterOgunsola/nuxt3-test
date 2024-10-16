@@ -1,0 +1,31 @@
+.blog_list_main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.blog_list_item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.blog_read_button {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $white;
+}
+
+.blog_line_top {
+    height: 1px;
+    width: 100%;
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

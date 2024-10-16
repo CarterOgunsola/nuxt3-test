@@ -45,6 +45,17 @@ interface BlogPostDocumentData {
     publication_date: prismic.DateField;
 
     /**
+     * summary field in *Blog Post*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.summary
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/field#key-text
+     */
+    summary: prismic.KeyTextField;
+
+    /**
      * Slice Zone field in *Blog Post*
      *
      * - **Field Type**: Slice Zone
